@@ -6,6 +6,7 @@
     <!--Boostrap cdn-->
     <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>    
     <div class="jumbotron text-center" style="margin-bottom:5">
@@ -42,6 +43,7 @@
         </div>
 
       </div>
+      <script src="/styles_weather.css"></script>
       <script>
         
         // Select Elements
@@ -86,16 +88,25 @@
           //node.appendChild(textnode);                              
           //document.getElementById("tiempo").appendChild(node);
           
-          
-      
 
         };
+        
+        function animation() {
+          var a = document.getElementById("charging");
+          ic.innerHTML = "&#xf185  &#xf186;";
+          setTimeout(function() {
+            ic.innerHTML = "&#xf753 &#xf73c &#xf75f;";
+          },2000);
+        };
+        
+        animation();
+        setInterval(animation, 3000);
 
     
       </script>
-
+    
     <div class="jumbotron text-center" style="margin-bottom:0">
-        <p>:)</p>
+      <div id="charging" class="fa">&#xf185  &#xf186</div>
     </div>
     
 </body>
